@@ -1,0 +1,3 @@
+package: github.com/terut/koten
+import:
+  - package: github.com/julienschmidt/httprouter
