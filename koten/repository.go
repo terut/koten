@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/julienschmidt/httprouter"
+	"github.com/labstack/echo"
 )
 
-func ListHandler(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	fmt.Fprint(w, "show repositories")
+func ListHandler(c echo.Context) error {
+	return c.String(http.StatusOK, "show repositories")
 }
 
-func TreeHandler(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
-	fmt.Fprintf(w, "tree %s!", p.ByName("n"))
+func TreeHandler(c echo.Context) error {
+	return c.String(http.StatusOK, fmt.Sprintf("tree %s!", c.Param("name")))
 }

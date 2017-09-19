@@ -2,18 +2,17 @@ package koten
 
 import (
 	"log"
-	"net/http"
 
-	"github.com/julienschmidt/httprouter"
+	"github.com/labstack/echo"
 )
 
-func registerHandlers(r *httprouter.Router) {
-	r.GET("/", ListHandler)
-	r.GET("/repos/:n", TreeHandler)
+func registerHandlers(e *echo.Echo) {
+	e.GET("/", ListHandler)
+	e.GET("/repos/:name", TreeHandler)
 }
 
 func Run() {
-	r := httprouter.New()
-	registerHandlers(r)
-	log.Fatal(http.ListenAndServe(":8080", r))
+	e := echo.New()
+	registerHandlers(e)
+	log.Fatal(e.Start(":8080"))
 }
