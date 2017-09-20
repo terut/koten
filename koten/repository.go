@@ -8,7 +8,7 @@ import (
 )
 
 func ListHandler(c echo.Context) error {
-	return c.String(http.StatusOK, "show repositories")
+	return c.Render(http.StatusOK, "hello", "show repositories")
 }
 
 func TreeHandler(c echo.Context) error {
