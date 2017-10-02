@@ -1,3 +1,0 @@
-package: github.com/terut/koten
-import:
-  - package: github.com/labstack/echo
