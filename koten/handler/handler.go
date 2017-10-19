@@ -1,4 +1,4 @@
-package koten
+package handler
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 )
 
 func ListHandler(c echo.Context) error {
-	return c.Render(http.StatusOK, "hello", "show repositories")
+	return c.Render(http.StatusOK, "repos", "show repositories")
 }
 
 func TreeHandler(c echo.Context) error {

@@ -5,16 +5,17 @@ import (
 	"log"
 
 	"github.com/labstack/echo"
+	"github.com/terut/koten/koten/handler"
 )
 
 func registerHandlers(e *echo.Echo) {
-	e.GET("/", ListHandler)
-	e.GET("/repos/:name", TreeHandler)
+	e.GET("/", handler.ListHandler)
+	e.GET("/repos/:name", handler.TreeHandler)
 }
 
 func registerRenderers(e *echo.Echo) {
 	templates := make(map[string]*template.Template)
-	templates["hello"] = template.Must(template.ParseFiles("koten/views/application.html", "koten/views/hello.html"))
+	templates["a"] = template.Must(template.ParseFiles("koten/views/application.tmpl", "koten/views/hello.tmpl"))
 	t := &Template{
 		templates: templates,
 	}
