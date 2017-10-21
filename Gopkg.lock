@@ -27,18 +27,6 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/sergi/go-diff"
-  packages = ["diffmatchpatch"]
-  revision = "feef008d51ad2b3778f85d387ccf91735543008d"
-
-[[projects]]
-  name = "github.com/src-d/go-git"
-  packages = ["."]
-  revision = "02c228585e543413479ea36d3a2bbc80a070eb93"
-  version = "v3.2.0"
-
-[[projects]]
-  branch = "master"
   name = "github.com/valyala/bytebufferpool"
   packages = ["."]
   revision = "e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7"
@@ -52,7 +40,7 @@
 [[projects]]
   branch = "master"
   name = "golang.org/x/crypto"
-  packages = ["acme","acme/autocert","curve25519","ed25519","ed25519/internal/edwards25519","ssh"]
+  packages = ["acme","acme/autocert"]
   revision = "9419663f5a44be8b34ca85f08abc5fe1be11f8a3"
 
 [[projects]]
@@ -61,21 +49,9 @@
   packages = ["unix"]
   revision = "314a259e304ff91bd6985da2a7149bbf91237993"
 
-[[projects]]
-  name = "gopkg.in/sourcegraph/go-vcsurl.v1"
-  packages = ["."]
-  revision = "6b12603ea6fd7f84b8c90118face09df39ea10c6"
-  version = "v1"
-
-[[projects]]
-  name = "gopkg.in/src-d/go-git.v3"
-  packages = ["clients","clients/common","clients/http","clients/ssh","core","diff","formats/idxfile","formats/packfile","formats/pktline","storage/memory","storage/seekable","storage/seekable/internal/gitdir","storage/seekable/internal/index","utils/fs"]
-  revision = "02c228585e543413479ea36d3a2bbc80a070eb93"
-  version = "v3.2.0"
-
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "b80422d0631cba3134e215f50235608e1cf527ce04779feba4ed45d768a256c5"
+  inputs-digest = "c5940a0eeeeed01345307ad7603c5459f83f45513d1c334546beb3dd77b11e0f"
   solver-name = "gps-cdcl"
   solver-version = 1
